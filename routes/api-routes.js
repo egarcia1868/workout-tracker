@@ -4,13 +4,21 @@ module.exports = function(app) {
 
   app.get("/api/workouts", function (req, res) {
     db.Workout.find({})
-      .sort({ date: -1 })
+      .sort({ day: -1 })
       .then(dbWorkout => {
         res.json(dbWorkout);
       })
       .catch(err => {
         res.status(400).json(err);
       });
+  });
+
+  app.get("/api/workouts/range", function (req, res) {
+    db.Workout.find({}).then(data => {
+      res.json(data)
+    }).catch(err => {
+      res.send(err);
+    });
   });
 
   app.put("/api/workouts/:id", function(req, res) {
