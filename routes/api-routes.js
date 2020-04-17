@@ -50,8 +50,8 @@ module.exports = function(app) {
       });
   });
 
-  app.post("/api/workouts/bulk", ({ body }, res) => {
-    db.Workout.insertMany(body)
+  app.post("/api/workouts/bulk", (req, res) => {
+    db.Workout.insertMany(req.body)
       .then(dbWorkout => {
         res.json(dbWorkout);
       })
