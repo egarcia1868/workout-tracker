@@ -8,7 +8,7 @@ To get this project up and running simply clone this repo onto your computer, in
 
 ### Screenshot
 
-![Screenshot!](/public/images/fitness-chart.png?raw=true "Screenshot of how the weather displays")
+![Screenshot!](/public/images/fitness-chart.png?raw=true "Screenshot of how the fitness chart displays")
 This is how the chart will display if you've only worked out Sunday and Monday and recorded your info (much more than I've worked out recently...)
 
 ## Built With
